@@ -1,0 +1,151 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.sidenav-container {
+  flex: 1;
+  margin-top: 64px; /* Height of the toolbar */
+}
+
+.sidenav {
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  height: calc(100vh - 64px);
+}
+
+/* Existing app-container styles */
+.app-container {
+  padding: 20px;
+  height: 100%;
+}
+
+.upload-container {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.nav-label {
+  margin-left: 8px;
+}
+
+/* Animation for sidenav */
+:host ::ng-deep .mat-sidenav {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+:host ::ng-deep .mat-sidenav.mat-drawer-opened {
+  transform: translateX(0);
+}
+
+.horizontal-layout {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.app-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+.chatbot-container {
+  flex: 2;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Target only the textarea form field */
+:host ::ng-deep .textarea-field.mat-mdc-form-field {
+  min-height: 500px;
+  display: block;
+}
+
+:host ::ng-deep .textarea-field .mat-mdc-form-field textarea {
+  min-height: 500px !important;
+  resize: vertical;
+}
+
+/* Remove the general mat-form-field styles */
+/* Add specific styles for the textarea container */
+.upload-container .form-group:has(textarea) .mat-mdc-form-field {
+  min-height: 500px;
+  display: block;
+}
+
+/* Target only the textarea */
+.upload-container textarea.mat-mdc-input-element {
+  min-height: 500px !important;
+  resize: vertical;
+}
+
+.file-status {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #2e7d32;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #d32f2f;
+}
+
+.success-icon {
+  color: #2e7d32;
+}
+
+.error-icon {
+  color: #d32f2f;
+}
+
+mat-progress-spinner {
+  display: inline-block;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}

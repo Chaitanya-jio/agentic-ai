@@ -1,0 +1,92 @@
+<div class="app-layout">
+  <!-- Header -->
+  <mat-toolbar color="primary" class="header">
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Agentic AI</span>
+  </mat-toolbar>
+
+  <!-- Main container with sidenav -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" class="sidenav">
+      <mat-nav-list>
+        <a mat-list-item>
+          <mat-icon>chat</mat-icon>
+          <span class="nav-label">Chat</span>
+        </a>
+        <a mat-list-item>
+          <mat-icon>history</mat-icon>
+          <span class="nav-label">History</span>
+        </a>
+        <a mat-list-item>
+          <mat-icon>settings</mat-icon>
+          <span class="nav-label">Settings</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">
+      <!-- Horizontal layout container -->
+      <div class="horizontal-layout">
+        <!-- Left side: app-container -->
+        <div class="app-container">
+          <div class="upload-container">
+            <div class="form-group">
+              <button mat-raised-button color="primary" (click)="fileInput.click()" [disabled]="isUploading">
+                <mat-icon>upload</mat-icon>
+                Choose PDF File
+              </button>
+              <input
+                #fileInput
+                type="file"
+                style="display: none"
+                accept="application/pdf"
+                (change)="onFileSelected($event)">
+              
+              <!-- File info and status -->
+              <div class="file-status" *ngIf="uploadedFileName || uploadError || isUploading">
+                <mat-progress-spinner
+                  *ngIf="isUploading"
+                  mode="indeterminate"
+                  diameter="24">
+                </mat-progress-spinner>
+                <span class="file-name" *ngIf="uploadedFileName">
+                  <mat-icon class="success-icon">check_circle</mat-icon>
+                  {{ uploadedFileName }}
+                </span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field appearance="fill" style="width: 100%;" class="textarea-field">
+                <textarea
+                  matInput
+                  [(ngModel)]="textContent"
+                  rows="3"
+                  placeholder="Enter text here">
+                </textarea>
+              </mat-form-field>
+            </div>
+            <span class="error-message" *ngIf="uploadError">
+                <mat-icon class="error-icon">error</mat-icon>
+                {{ uploadError }}
+            </span>
+            <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="onSubmit()">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <!-- Right side: app-chatbot -->
+        <div class="chatbot-container">
+          <app-chatbot></app-chatbot>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

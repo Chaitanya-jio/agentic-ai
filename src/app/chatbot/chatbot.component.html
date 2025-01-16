@@ -1,0 +1,61 @@
+<mat-tab-group>
+  <mat-tab label="Chat">
+    <div class="chatbot-wrapper">
+      <div class="chat-container" style="box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);">
+        <div *ngFor="let message of chatMessages" [ngClass]="message.role">
+          <div class="message-content">{{ message.content }}</div>
+          <div class="message-timestamp">{{ message.timestamp | date:'shortTime' }}</div>
+        </div>
+        <div *ngIf="isTyping" class="typing-indicator">
+          <span>Assistant is typing...</span>
+        </div>
+      </div>
+      
+
+      <div class="input-container">
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <textarea
+            matInput
+            [(ngModel)]="userMessage"
+            rows="1"
+            placeholder="Type your message here"
+            (keydown.enter)="sendMessage(); $event.preventDefault()"
+            class="user-message-textarea">
+          </textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="sendMessage()">
+          <mat-icon>send</mat-icon>
+          Send
+        </button>
+      </div>
+    </div>
+  </mat-tab>
+  
+  <mat-tab label="Talk">
+    <div class="chatbot-wrapper">
+      <div class="chat-container" style="box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);">
+        <div *ngFor="let message of talkMessages" [ngClass]="message.role">
+          <div class="message-content">{{ message.content }}</div>
+          <div class="message-timestamp">{{ message.timestamp | date:'shortTime' }}</div>
+        </div>
+      </div>
+      
+      <div class="voice-input-container">
+        <button 
+          mat-fab 
+          color="primary" 
+          [class.listening]="isListening"
+          (click)="toggleVoiceInput()"
+          [disabled]="!isSpeechSupported">
+          <mat-icon *ngIf="isListening">mic</mat-icon>
+          <mat-icon *ngIf="!isListening">mic_none</mat-icon>
+        </button>
+        <div class="voice-status" *ngIf="isListening">Listening...</div>
+        <div class="voice-status error" *ngIf="!isSpeechSupported">
+          Speech recognition not supported in this browser
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+  
