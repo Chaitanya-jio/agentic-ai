@@ -37,11 +37,11 @@
       "signature": "base64sig..."
     },
     "darwin-aarch64": {
-      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3_x64.dmg",
+      "url": "https://github.com/Chaitanya-jio/agentic-ai/blob/main/JioWrite_0.0.3_x64.dmg",
       "signature": "base64sig..."
     },
     "darwin-x86_64":{
-      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3_x64.dmg",
+      "url": "https://github.com/Chaitanya-jio/agentic-ai/blob/main/JioWrite_0.0.3_x64.dmg",
       "signature": "base64sig..."
     },
     "linux-x86_64": {
