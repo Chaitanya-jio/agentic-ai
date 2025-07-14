@@ -1,0 +1,48 @@
+{
+  "version": "0.0.3",
+  "notes": "✨ Major update with new dashboard and offline support.",
+  "pub_date": "2025-07-10T10:00:00Z",
+  "force_update": true,
+  "critical": true,
+  "min_supported_version": "0.0.1",
+  "rollback_available": true,
+  "rollback_version": "0.0.0",
+  "minimum_jump_version": "0.0.1",  
+  "breaking_versions": ["0.0.1"],
+  "rollback_urls": {
+    "windows-x86_64": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/rollback/JioWrite_0.0.1-win.exe",
+    "darwin-aarch64": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/rollback/JioWrite_0.0.1_x64.dmg",
+    "linux-x86_64": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/rollback/JioWrite_0.0.1.AppImage"
+  },
+  "channels": ["stable", "lts"],
+  "tags": ["mandatory", "security"],
+  "silent": false,
+  "locale_notes": {
+    "en": "Bug fixes and performance improvements.",
+    "es": "Corrección de errores y mejoras de rendimiento."
+  },
+  "feature_flags": {
+    "enable_new_ui": true,
+    "enable_beta_feature": false
+  },
+  "meta": {
+    "release_type": "stable",
+    "hash": "abc123...",
+    "file_size_mb": 86
+  },
+
+  "platforms": {
+    "windows-x86_64": {
+      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3-win.exe",
+      "signature": "base64sig..."
+    },
+    "darwin-aarch64": {
+      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3_x64.dmg",
+      "signature": "base64sig..."
+    },
+    "linux-x86_64": {
+      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3.AppImage",
+      "signature": "base64sig..."
+    }
+  }
+} 
