@@ -45,8 +45,8 @@
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTK2VOdW1ialBSamxwd2hxdHdSdUxvL1NSTHJCbWg4MTg1QnhsS2Jpd0ZSMEEwSXAyOHBMMTV1bzJseEl6QWFXWEZzQVdqUXJJZnV1RG1UL3g0V3ovVjF6N29WcTNPc1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUyNTAzOTIxCWZpbGU6SmlvV3JpdGUuYXBwLnRhci5negpNek83MkFETmhDNWlqOUtsSHRFdDFwekpyRVlXV1lCbXZmNEd6WGF5d3BVZ0w4V3Z4NzBlcjhKcmZ5VS9aNGZiMVoxV1JVTGM3Mmk1MTRnRkhWdlFCdz09Cg=="
     },
     "linux-x86_64": {
-      "url": "file:///Users/chaitanya.k/Documents/Projects/Jioworkspace/build/JioWorkspace-Dashboard-UI-build/dev/JioWrite_0.0.3.AppImage",
-      "signature": "base64sig..."
+      "url": "https://raw.githubusercontent.com/Chaitanya-jio/agentic-ai/refs/heads/main/JioWrite_0.0.1_amd64.AppImage",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSeE9rUm45a2NwdDdXeXJvUk02MTRSck9ueTMvY1hhbm5VcE9lbzNVRFJkMC9IWlhvQThUdiswTlNDUFdwUmZoVGRLbkJseWlpeURkZ1gyVllnbGxVZ0hwUHFDYnptK1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUyNzM2ODIyCWZpbGU6SmlvV3JpdGVfMC4wLjBfYW1kNjQuQXBwSW1hZ2UKWlgyWk5Ld2ljLzg2OWtnTnVqVkhQRnlmVlFubWVDcjNnaFEvelk4OUhpOTBBTTQrbXVxZ1laNk02QWt0TnZYL0EzZnlCVEdIVHc0Tmk0am8xdWNmQXc9PQo="
     }
   }
 } 
